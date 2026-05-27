@@ -41,20 +41,11 @@ La plateforme s'adresse aux **seniors** et leur permet de :
 ## 📁 Structure du projet
 
 ```
-vitacare/
-├── frontend/          # Application React
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── App.jsx
-│   └── public/
-├── backend/           # API PHP
-│   ├── api/
-│   ├── config/
-│   └── models/
-├── database/
-│   └── vitacare.sql   # Script de création de la base de données
-├── docs/              # Wireframes, MCD, spécifications
+VitaCare/
+├── code/              # Code source (frontend React + backend PHP)
+├── docs/              # Documentation (MCD, wireframes, spécifications)
+│   └── MCD.png        # Modèle Conceptuel de Données
+├── maquette/          # Maquettes et prototypes UI
 ├── .gitignore
 └── README.md
 ```
