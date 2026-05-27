@@ -1,1 +1,1 @@
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/site/MncbfDOOZpgf1NKyiLUbFL/Vitacare?embed-host=share" allowfullscreen></iframe>
+https://www.figma.com/site/MncbfDOOZpgf1NKyiLUbFL/Vitacare?node-id=0-1&t=F6Q1uuAFT2fbY7w6-1
