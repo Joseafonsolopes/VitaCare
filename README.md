@@ -9,7 +9,7 @@
 | Nom | Rôle |
 |-----|------|
 | José Afonso Lopes | chef de projet |
-| Natheo Milliet-Treboux | design |
+| Nathéo Milliet-Treboux | design |
 | Eliott Munoz | code |
 
 ---
