@@ -45,6 +45,7 @@ VitaCare/
 ├── code/              # Code source (frontend React + backend PHP)
 ├── docs/              # Documentation (MCD, wireframes, spécifications)
 │   └── MCD.png        # Modèle Conceptuel de Données
+│   └── architecture.png    #schema d'architecture du site  
 ├── maquette/          # Maquettes et prototypes UI
 ├── .gitignore
 └── README.md
