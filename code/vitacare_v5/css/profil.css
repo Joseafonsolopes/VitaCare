@@ -1,0 +1,309 @@
+.profil-page {
+  background-color: var(--vert-tres-clair);
+  min-height: calc(100vh - 60px);
+  padding: 30px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* EN-TÊTE */
+.profil-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  background: var(--blanc);
+  padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--ombre);
+}
+
+.profil-avatar {
+  width: 72px;
+  height: 72px;
+  background-color: var(--vert-fonce);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+  font-size: 22px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profil-info h2 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 3px;
+}
+
+.profil-info p {
+  font-size: 13px;
+  color: var(--texte-gris);
+  margin-bottom: 6px;
+}
+
+.badge-statut {
+  background-color: var(--vert-clair);
+  color: var(--vert-fonce);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.btn-espace {
+  margin-left: auto;
+  background-color: var(--vert-fonce);
+  color: var(--blanc);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-espace:hover { background-color: var(--vert-moyen); }
+
+/* STATS */
+.profil-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profil-stat-carte {
+  flex: 1;
+  background: var(--blanc);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--ombre);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profil-stat-nombre {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--vert-fonce);
+  font-family: 'Playfair Display', serif;
+}
+
+.profil-stat-label {
+  font-size: 12px;
+  color: var(--texte-gris);
+}
+
+/* GRILLE */
+.profil-grille {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.profil-colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* SECTIONS */
+.profil-section {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--ombre);
+}
+
+.profil-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 16px;
+  color: var(--texte-fonce);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h3 { margin-bottom: 0; }
+
+.voir-tout {
+  font-size: 12px;
+  color: var(--vert-fonce);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* INFOS */
+.info-ligne {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--vert-clair);
+  font-size: 14px;
+}
+
+.info-ligne:last-child { border-bottom: none; }
+
+.info-cle { color: var(--texte-gris); }
+.info-val { font-weight: 500; text-align: right; }
+
+/* PRÉFÉRENCES */
+.preferences-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-preference {
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--vert-clair);
+  color: var(--vert-fonce);
+}
+
+/* INTERVENANTS FAVORIS */
+.intervenant-fav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--vert-clair);
+}
+
+.intervenant-fav:last-child { border-bottom: none; }
+
+.fav-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--vert-fonce);
+  color: var(--blanc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.fav-info { flex: 1; }
+.fav-nom { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.fav-cat { font-size: 12px; color: var(--texte-gris); }
+.fav-seances { font-size: 12px; color: var(--texte-gris); white-space: nowrap; }
+
+/* ONGLETS RÉSERVATIONS */
+.onglets-resa {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.onglet-resa {
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1.5px solid #dde8e0;
+  background: transparent;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texte-gris);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.onglet-resa:hover { border-color: var(--vert-fonce); color: var(--vert-fonce); }
+.onglet-resa.actif { background-color: var(--vert-fonce); color: var(--blanc); border-color: var(--vert-fonce); }
+
+/* ITEMS RÉSERVATION */
+.resa-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--vert-clair);
+}
+
+.resa-item:last-child { border-bottom: none; }
+
+.resa-emoji {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--vert-clair);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.resa-info { flex: 1; }
+.resa-nom { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.resa-meta { font-size: 12px; color: var(--texte-gris); }
+.resa-vide { font-size: 13px; color: #999; text-align: center; padding: 20px 0; }
+
+.badge-resa {
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-resa.confirmee { background-color: var(--vert-clair); color: var(--vert-fonce); }
+.badge-resa.passee    { background-color: #f0f0f0; color: #888; }
+.badge-resa.annulee   { background-color: #fce8e8; color: #c0392b; }
+
+/* PROGRAMMES */
+.programme-item {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--vert-clair);
+}
+
+.programme-item:last-child { border-bottom: none; margin-bottom: 0; }
+
+.programme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.programme-nom { font-size: 14px; font-weight: 600; }
+.programme-info { font-size: 12px; color: var(--texte-gris); }
+
+.programme-barre {
+  width: 100%;
+  height: 8px;
+  background-color: var(--vert-clair);
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.programme-progression {
+  height: 100%;
+  background-color: var(--vert-fonce);
+  border-radius: 50px;
+  transition: width 0.5s ease;
+}
+
+.programme-pct {
+  font-size: 12px;
+  color: var(--texte-gris);
+  font-weight: 600;
+}
