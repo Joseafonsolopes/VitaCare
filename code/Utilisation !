@@ -1,3 +1,20 @@
 IMPORTANT !!!
 
 pour ouvrir le dossier du site il faut activer WAMP serveur en ouvrant l'appli puis mettre le dossier dans WWW
+
+ensuite le lien a mettre sur google est :
+
+http://localhost/vitacare_v2/index.php
+
+ca vous mets sur la page d'acceuil 
+
+ensuite si vous voulez vous connecter:  -soit vous creer un compte mais ce sera uniquement un compte utilisateur 
+                                        -soit vous utilisé les loggins suivant:
+
+    - administrateur:      mail: admin@vitacare.fr              -->    mot de passe: vitacare123
+    - intervenant:         mail: marie.dupont@vitacare.fr       -->    mot de passe: vitacare123
+
+et je vous laisse decouvrir vous pouvez me contacter si vous avez des questions ou creer un fichier texte a coter de celui si
+avec vos idees de modification.
+
+Ceci n'est pas generer par l'ia donc svp lisez-le mdr 
