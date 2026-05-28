@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitaCare - Accueil</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/accueil.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+  <div id="navbar"></div>
+  <div id="root"></div>
+
+  <!-- NAVBAR -->
+  <script type="text/babel">
+    function Navbar() {
+      return (
+        <nav className="navbar">
+          <div className="navbar-logo">Vitacare</div>
+          <ul className="navbar-liens">
+            <li><a href="index.html" className="actif">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reservation.html">Prendre rendez-vous</a></li>
+            <li><a href="profil.html">Mon profil</a></li>
+          </ul>
+          <a href="connexion.html" className="navbar-btn-connexion">Connexion</a>
+        </nav>
+      );
+    }
+    const navRoot = ReactDOM.createRoot(document.getElementById('navbar'));
+    navRoot.render(<Navbar />);
+  </script>
+
+  <!-- PAGE ACCUEIL -->
+  <script type="text/babel">
+
+    const services = [
+      { emoji: '🧘', type: 'Bien-être', nom: 'Yoga Douceur' },
+      { emoji: '🥗', type: 'Nutrition', nom: 'Consultation nutrition' },
+      { emoji: '🧠', type: 'Santé mentale', nom: 'Sophrologie' },
+      { emoji: '🚶', type: 'Activité', nom: 'Marche nordique' },
+      { emoji: '💆', type: 'Thérapie', nom: 'Massage thérapeutique' },
+      { emoji: '🌿', type: 'Bien-être', nom: 'Méditation guidée' },
+    ];
+
+    const rdvProchains = [
+      'Yoga douceur · Lun. 10h00',
+      'Diététicienne · Mer. 14h30',
+      'Atelier méditation · Sam. 31 mai',
+    ];
+
+    function CarteService({ emoji, type, nom }) {
+      return (
+        <div className="carte-service">
+          <div className="carte-icone">{emoji}</div>
+          <p className="carte-type">{type}</p>
+          <p className="carte-nom">{nom}</p>
+        </div>
+      );
+    }
+
+    function Accueil() {
+      return (
+        <div>
+          {/* HERO */}
+          <section className="hero">
+            <div className="hero-gauche">
+              <span className="hero-badge">Bien-être holistique</span>
+              <h1>Votre santé et votre<br />sérénité, au quotidien</h1>
+              <p>
+                Réservez vos consultations, participez à des ateliers<br />
+                de bien-être et suivez votre parcours en toute simplicité.
+              </p>
+              <div className="hero-boutons">
+                <a href="reservation.html" className="btn-primaire">Prendre un rendez-vous</a>
+                <a href="services.html" className="btn-secondaire">Découvrir les services</a>
+              </div>
+            </div>
+
+            <div className="hero-widget">
+              <p className="widget-titre">Prochains rendez-vous</p>
+              {rdvProchains.slice(0, 2).map(function(rdv, i) {
+                return <div key={i} className="widget-rdv">{rdv}</div>;
+              })}
+              <p className="widget-titre" style={{marginTop: '12px'}}>À venir</p>
+              {rdvProchains.slice(2).map(function(rdv, i) {
+                return <div key={i} className="widget-rdv">{rdv}</div>;
+              })}
+            </div>
+          </section>
+
+          {/* NOS SERVICES */}
+          <section className="section-services">
+            <h2>Nos services</h2>
+            <div className="grille-services">
+              {services.map(function(s, i) {
+                return <CarteService key={i} emoji={s.emoji} type={s.type} nom={s.nom} />;
+              })}
+            </div>
+          </section>
+
+          {/* STATS */}
+          <section className="stats">
+            <div className="stat-item">
+              <span className="stat-nombre">32</span>
+              <span className="stat-label">Services disponibles</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-nombre">12</span>
+              <span className="stat-label">Intervenants</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-nombre">320+</span>
+              <span className="stat-label">Membres actifs</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-nombre">4,8 ★</span>
+              <span className="stat-label">Satisfaction</span>
+            </div>
+          </section>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Accueil />);
+  </script>
+
+</body>
+</html>
