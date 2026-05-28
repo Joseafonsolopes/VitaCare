@@ -1,0 +1,189 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--vert-tres-clair);
+  padding: 60px 80px;
+  min-height: 380px;
+}
+
+.hero-gauche { max-width: 560px; }
+
+.hero-badge {
+  display: inline-block;
+  background-color: var(--vert-clair);
+  color: var(--vert-fonce);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-gauche h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: var(--texte-fonce);
+  margin-bottom: 16px;
+}
+
+.hero-gauche p {
+  font-size: 16px;
+  color: var(--texte-gris);
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.hero-boutons {
+  display: flex;
+  gap: 14px;
+}
+
+.hero-widget {
+  background-color: var(--blanc);
+  border-radius: var(--radius);
+  padding: 20px;
+  min-width: 240px;
+  box-shadow: var(--ombre);
+}
+
+.widget-titre {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texte-gris);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.widget-rdv {
+  background-color: var(--vert-clair);
+  color: var(--vert-fonce);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+
+.section-services {
+  background-color: var(--beige-clair);
+  padding: 60px 80px;
+}
+
+.section-services h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.grille-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.carte-service {
+  background-color: var(--blanc);
+  border-radius: var(--radius);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: var(--ombre);
+  cursor: pointer;
+  flex: 1;
+  min-width: 200px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.carte-service:hover {
+  box-shadow: var(--ombre-hover);
+  transform: translateY(-3px);
+}
+
+.carte-icone {
+  width: 52px;
+  height: 52px;
+  background-color: var(--vert-clair);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 12px;
+}
+
+.carte-type {
+  font-size: 12px;
+  color: var(--texte-gris);
+  margin-bottom: 6px;
+}
+
+.carte-nom {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--vert-fonce);
+  padding: 30px 80px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-nombre {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blanc);
+  font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.widget-rdv-vide {
+  font-size: 13px;
+  color: var(--texte-gris);
+  padding: 8px 14px;
+  background-color: var(--vert-tres-clair);
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+}
+
+.widget-activite {
+  background-color: #fff8ed;
+  color: #a07020;
+  line-height: 1.6;
+}
+
+.widget-btn {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  background-color: var(--vert-fonce);
+  color: var(--blanc);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section-sous-titre {
+  font-size: 14px;
+  color: var(--texte-gris);
+  margin-bottom: 24px;
+  margin-top: -16px;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 28px;
+}
