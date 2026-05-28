@@ -1,0 +1,212 @@
+.auth-page {
+  min-height: 100vh;
+  background-color: var(--vert-tres-clair);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-logo {
+  margin-bottom: 24px;
+}
+
+.auth-logo a {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--vert-fonce);
+}
+
+.auth-carte {
+  background-color: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--ombre);
+}
+
+.auth-carte h1 {
+  font-size: 26px;
+  color: var(--texte-fonce);
+  margin-bottom: 6px;
+}
+
+.auth-sous-titre {
+  font-size: 14px;
+  color: var(--texte-gris);
+  margin-bottom: 28px;
+}
+
+/* FORMULAIRE */
+.form-groupe {
+  margin-bottom: 16px;
+}
+
+.form-ligne {
+  display: flex;
+  gap: 16px;
+}
+
+.form-ligne .form-groupe {
+  flex: 1;
+}
+
+.form-groupe label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texte-fonce);
+  margin-bottom: 6px;
+}
+
+.form-groupe input {
+  width: 100%;
+  padding: 11px 16px;
+  border: 1.5px solid #dde8e0;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: var(--blanc);
+}
+
+.form-groupe input:focus {
+  border-color: var(--vert-fonce);
+}
+
+/* RÔLES */
+.role-choix {
+  display: flex;
+  gap: 12px;
+}
+
+.role-option {
+  flex: 1;
+  cursor: pointer;
+}
+
+.role-option input[type="radio"] {
+  display: none;
+}
+
+.role-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px;
+  border: 2px solid #dde8e0;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.role-carte:hover {
+  border-color: var(--vert-fonce);
+  background-color: var(--vert-tres-clair);
+}
+
+.role-option input[type="radio"]:checked + .role-carte {
+  border-color: var(--vert-fonce);
+  background-color: var(--vert-clair);
+}
+
+.role-emoji { font-size: 24px; }
+
+.role-carte span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texte-fonce);
+}
+
+.role-carte small {
+  font-size: 11px;
+  color: var(--texte-gris);
+}
+
+/* BOUTON */
+.btn-auth {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  color: var(--blanc);
+  border: none;
+  padding: 13px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.btn-auth:hover {
+  background-color: var(--vert-moyen);
+}
+
+/* ALERTES */
+.alerte {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.alerte-erreur {
+  background-color: #fce8e8;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+}
+
+.alerte-succes {
+  background-color: var(--vert-clair);
+  color: var(--vert-fonce);
+  border: 1px solid #b8d4c0;
+}
+
+/* LIEN */
+.auth-lien {
+  text-align: center;
+  font-size: 13px;
+  color: var(--texte-gris);
+  margin-top: 20px;
+}
+
+.auth-lien a {
+  color: var(--vert-fonce);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* COMPTES TEST */
+.comptes-test {
+  background-color: var(--beige-clair);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-top: 20px;
+}
+
+.test-titre {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texte-gris);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.test-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.test-liste span {
+  font-size: 12px;
+  color: var(--texte-gris);
+}
