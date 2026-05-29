@@ -1,0 +1,85 @@
+Pour le rapport - version actuelle du projet VitaCare
+
+
+
+Le site a été développé en PHP natif avec React intégré via Babel in-browser (pas de build Vite/Node, tout tourne directement sous WAMP). L'architecture est donc : fichiers .php qui servent
+à la fois les données MySQL et le HTML, avec React côté client pour la logique des interfaces.
+
+
+
+Pages réalisées et fonctionnelles :
+
+index.php — page d'accueil avec services dynamiques chargés depuis la base et widget des prochains rendez-vous
+services.php — catalogue avec filtres (type, durée, prix), barre de recherche, tri (prix croissant/décroissant, durée, récent)
+reservation.php — page de réservation avec calendrier dynamique, créneaux horaires en temps réel, vérification des disponibilités
+panier.php — panier de réservations en 3 étapes : récapitulatif des items, paiement simulé avec carte, confirmation
+profil.php — profil utilisateur avec stats, historique des réservations, préférences, programmes en cours
+notifications.php — page de notifications générées automatiquement à chaque réservation
+connexion.php / inscription.php / deconnexion.php — authentification avec sessions PHP et gestion des 3 rôles
+Dashboard admin — stats globales, création/désactivation de comptes utilisateurs
+Dashboard intervenant — création de services, gestion des créneaux, programmes
+
+
+
+
+
+Base de données MySQL :
+
+7 tables — users, services, reservations, activites, inscriptions_activites, notifications, programmes
+3 rôles : Patient (utilisateur), Intervenant, Administrateur — avec redirections automatiques selon le rôle à la connexion
+
+
+
+
+
+Ce qui a été simplifié/abandonné par rapport au plan initial :
+
+On n'a pas utilisé React Router (navigation entre pages .php classique)
+Axios abandonné au profit de fetch natif
+JWT retiré au profit des sessions PHP (plus cohérent avec ce qu'on a vu en cours)
+La structure React séparée (Vite + dossier frontend) abandonnée au profit d'un React intégré dans les fichiers PHP
+
+
+
+
+Technologies utilisées et justification:
+
+
+
+PHP:
+
+Nous avons utilisé PHP pour le backend car c'est la technologie enseignée dans le cadre du module de Web dynamique. PHP nous permet de gérer la logique serveur, d'effectuer les requêtes vers la base de données MySQL, et de gérer les sessions utilisateurs.
+C'est un langage simple à mettre en place avec WAMP et parfaitement adapté à une architecture client-serveur comme la nôtre.
+
+
+
+MySQL:
+
+MySQL est le système de gestion de base de données que nous avons utilisé pour stocker l'ensemble des données de la plateforme (utilisateurs, services, réservations, notifications, etc.). Il est directement intégré à WAMP et nous avons interagi avec
+lui via phpMyAdmin pour créer et tester nos tables.
+
+
+
+Sessions PHP:
+
+Pour l'authentification, nous avons choisi les sessions PHP natives plutôt qu'une autre approche, car c'est ce que nous avons étudié en cours. Les sessions permettent de maintenir l'état de connexion d'un utilisateur entre les différentes pages et de
+gérer les redirections selon son rôle (patient, intervenant, administrateur).
+
+
+
+React (via Babel in-browser):
+
+Nous avons utilisé React pour construire les interfaces utilisateur de manière dynamique, notamment pour les filtres du catalogue, le calendrier de réservation et le panier. Plutôt que d'utiliser un environnement Node.js avec Vite, nous avons intégré
+React directement dans nos fichiers PHP via Babel in-browser, ce qui nous a permis de travailler sans configuration supplémentaire tout en bénéficiant de la logique de composants de React.
+
+
+
+CSS custom:
+
+Nous avons écrit notre propre CSS avec des variables pour maintenir une cohérence visuelle sur l'ensemble du site (couleurs, typographie, espacements), en restant fidèles à la maquette réalisée sur Figma par notre camarade.
+
+
+
+WAMP:
+
+WAMP a été utilisé comme environnement de développement local. Il regroupe Apache, MySQL et PHP en un seul outil, ce qui nous a permis de faire tourner le projet facilement sur nos machines sans configuration complexe.
