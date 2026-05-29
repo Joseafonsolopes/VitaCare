@@ -1,0 +1,86 @@
+.panier-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  min-height: calc(100vh - 60px);
+}
+
+.panier-titre { font-size: 26px; margin-bottom: 6px; font-family: 'DM Sans', sans-serif; font-weight: 700; }
+.panier-sous-titre { font-size: 14px; color: var(--texte-gris); margin-bottom: 28px; }
+
+.panier-grille { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
+
+.panier-items { background: var(--blanc); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--ombre); }
+.panier-vide { text-align: center; padding: 40px 0; }
+
+.panier-item { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--vert-clair); }
+.panier-item:last-of-type { border-bottom: none; }
+
+.panier-item-emoji { font-size: 24px; width: 50px; height: 50px; background-color: var(--vert-clair); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.panier-item-info { flex: 1; }
+.panier-item-nom { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+.panier-item-meta { font-size: 12px; color: var(--texte-gris); }
+.panier-item-prix { font-size: 18px; font-weight: 700; color: var(--vert-fonce); white-space: nowrap; }
+.panier-item-suppr { background: none; border: 1.5px solid #ddd; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; font-size: 13px; color: #999; transition: all 0.2s; flex-shrink: 0; }
+.panier-item-suppr:hover { border-color: #e74c3c; color: #e74c3c; }
+
+.panier-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--vert-clair); }
+.btn-ajouter { font-size: 13px; font-weight: 600; color: var(--vert-fonce); text-decoration: underline; }
+.btn-vider { background: none; border: none; font-size: 13px; color: #e74c3c; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: underline; }
+
+.panier-recap { background: var(--blanc); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--ombre); }
+.panier-recap h3 { font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; margin-bottom: 16px; }
+.recap-ligne { display: flex; justify-content: space-between; font-size: 13px; color: var(--texte-gris); margin-bottom: 8px; }
+.recap-total { display: flex; justify-content: space-between; font-size: 16px; font-weight: 700; border-top: 2px solid var(--vert-clair); padding-top: 12px; margin-top: 8px; margin-bottom: 4px; }
+.recap-nb { font-size: 12px; color: var(--texte-gris); margin-bottom: 16px; }
+
+.btn-valider { width: 100%; background-color: var(--vert-fonce); color: var(--blanc); border: none; padding: 14px; border-radius: 50px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
+.btn-valider:hover { background-color: var(--vert-moyen); }
+
+.paiement-grille { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
+.paiement-carte { background: var(--blanc); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--ombre); }
+.paiement-carte h3 { font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; margin-bottom: 20px; }
+
+.carte-bancaire { background: linear-gradient(135deg, var(--vert-fonce), #2a4d38); border-radius: 14px; padding: 24px; color: white; margin-bottom: 20px; }
+.carte-numero { font-size: 18px; font-weight: 600; letter-spacing: 3px; margin-bottom: 16px; }
+.carte-bas { display: flex; justify-content: space-between; font-size: 14px; }
+
+.form-groupe { margin-bottom: 14px; }
+.form-groupe label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.form-groupe input { width: 100%; padding: 10px 14px; border: 1.5px solid #dde8e0; border-radius: var(--radius-sm); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; }
+
+.resume-commande { background: var(--blanc); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--ombre); }
+.resume-commande h3 { font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; margin-bottom: 16px; }
+
+.verifications { background: var(--vert-tres-clair); border-radius: var(--radius-sm); padding: 12px 14px; margin: 16px 0; }
+.verif-titre { font-size: 13px; font-weight: 600; color: var(--vert-fonce); margin-bottom: 6px; }
+.verif-item { font-size: 12px; color: var(--vert-fonce); margin-bottom: 3px; }
+
+.btn-payer { width: 100%; background-color: var(--vert-fonce); color: var(--blanc); border: none; padding: 14px; border-radius: 50px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; margin-bottom: 8px; }
+.btn-payer:hover { background-color: var(--vert-moyen); }
+.btn-payer:disabled { background-color: #999; cursor: not-allowed; }
+.paiement-info { font-size: 11px; color: var(--texte-gris); text-align: center; margin-bottom: 12px; }
+
+.btn-retour-panier { width: 100%; background: none; border: 1.5px solid #ddd; padding: 10px; border-radius: 50px; font-size: 14px; cursor: pointer; color: var(--texte-gris); font-family: 'DM Sans', sans-serif; }
+.btn-retour-panier:hover { border-color: var(--vert-fonce); color: var(--vert-fonce); }
+
+.alerte-panier { padding: 12px 16px; border-radius: var(--radius-sm); font-size: 14px; margin-bottom: 16px; }
+.alerte-panier.erreur { background: #fce8e8; color: #c0392b; }
+.alerte-panier.ok { background: var(--vert-clair); color: var(--vert-fonce); }
+
+.confirmation-bloc { text-align: center; background: var(--blanc); border-radius: var(--radius-lg); padding: 60px 40px; box-shadow: var(--ombre); max-width: 500px; margin: 60px auto; }
+.confirmation-icone { font-size: 60px; margin-bottom: 20px; }
+.confirmation-bloc h1 { font-size: 24px; margin-bottom: 12px; font-family: 'DM Sans', sans-serif; }
+.confirmation-bloc p { font-size: 14px; color: var(--texte-gris); margin-bottom: 8px; }
+.confirmation-actions { margin-top: 24px; }
+
+.badge-places {
+  background-color: var(--vert-fonce);
+  color: var(--blanc);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 50px;
+  margin-left: 6px;
+  vertical-align: middle;
+}

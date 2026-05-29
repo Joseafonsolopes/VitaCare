@@ -1,0 +1,119 @@
+.notif-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  min-height: calc(100vh - 60px);
+}
+
+.notif-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.notif-page-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 4px;
+}
+
+.notif-page-header p {
+  font-size: 14px;
+  color: var(--texte-gris);
+}
+
+.btn-supprimer-tout {
+  background: none;
+  border: 1.5px solid #e74c3c;
+  color: #e74c3c;
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+
+.btn-supprimer-tout:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+/* LISTE */
+.notif-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* CARTE */
+.notif-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  box-shadow: var(--ombre);
+  border-left: 4px solid transparent;
+  transition: transform 0.15s;
+}
+
+.notif-card:hover { transform: translateX(3px); }
+
+.notif-confirmation { border-left-color: #2d5a3d; }
+.notif-annulation   { border-left-color: #e74c3c; }
+.notif-info         { border-left-color: #f0a030; }
+
+.notif-card-icone {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notif-confirmation .notif-card-icone { background: #e8f5e9; }
+.notif-annulation .notif-card-icone   { background: #fce8e8; }
+.notif-info .notif-card-icone         { background: #fff8e1; }
+
+.notif-card-contenu { flex: 1; }
+
+.notif-card-message {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--texte-fonce);
+  margin-bottom: 6px;
+}
+
+.notif-card-temps {
+  font-size: 12px;
+  color: var(--texte-gris);
+}
+
+/* VIDE */
+.notif-vide {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--ombre);
+}
+
+.notif-vide-icone {
+  font-size: 50px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.notif-vide p {
+  font-size: 15px;
+  color: var(--texte-gris);
+}
