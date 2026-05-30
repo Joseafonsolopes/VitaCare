@@ -1,0 +1,256 @@
+.detail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+/* EN-TÊTE */
+.detail-retour {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--texte-gris);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+.detail-retour:hover { color: var(--vert-fonce); }
+
+.detail-header {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.detail-header-gauche { flex: 1; }
+
+.detail-emoji {
+  font-size: 52px;
+  margin-bottom: 12px;
+}
+
+.detail-header-gauche h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: var(--texte-fonce);
+  margin-bottom: 12px;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--texte-gris);
+}
+
+.detail-badge-cat {
+  background: var(--vert-clair);
+  color: var(--vert-fonce);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.detail-description {
+  font-size: 15px;
+  color: var(--texte-gris);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* CARTE RÉSERVATION */
+.detail-carte-resa {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--ombre);
+  width: 300px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+}
+
+.detail-prix {
+  font-size: 34px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: var(--vert-fonce);
+  margin-bottom: 2px;
+}
+
+.detail-prix-label {
+  font-size: 13px;
+  color: var(--texte-gris);
+  margin-bottom: 20px;
+}
+
+.detail-intervenant {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--vert-clair);
+  border-bottom: 1px solid var(--vert-clair);
+  margin-bottom: 12px;
+}
+
+.detail-interv-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--vert-fonce);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.detail-interv-nom { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.detail-interv-role { font-size: 12px; color: var(--texte-gris); }
+
+.detail-contact {
+  font-size: 13px;
+  color: var(--texte-gris);
+  margin-bottom: 6px;
+}
+
+.btn-reserver-detail {
+  display: block;
+  width: 100%;
+  background: var(--vert-fonce);
+  color: white;
+  text-align: center;
+  padding: 14px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+
+.btn-reserver-detail:hover { background: var(--vert-moyen); }
+
+.btn-contacter-detail {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 1.5px solid var(--vert-fonce);
+  color: var(--vert-fonce);
+  text-align: center;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.btn-contacter-detail:hover { background: var(--vert-clair); }
+
+/* GRILLE */
+.detail-grille {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+}
+
+.detail-section {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--ombre);
+}
+
+.detail-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* CRÉNEAUX */
+.creneaux-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.creneau-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--vert-clair);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+
+.creneau-card:hover { border-color: var(--vert-fonce); }
+
+.creneau-card-date {
+  text-align: center;
+  min-width: 44px;
+  background: var(--vert-clair);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+}
+
+.creneau-jour { font-size: 20px; font-weight: 700; color: var(--vert-fonce); line-height: 1; }
+.creneau-mois { font-size: 11px; color: var(--vert-fonce); text-transform: uppercase; }
+
+.creneau-card-info { flex: 1; }
+.creneau-card-heure { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.creneau-card-places { font-size: 12px; font-weight: 500; }
+
+.btn-creneau-reserver {
+  background: var(--vert-fonce);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-creneau-reserver:hover { background: var(--vert-moyen); }
+
+/* AUTRES SERVICES */
+.autres-services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.autre-service-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--vert-clair);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.autre-service-card:hover {
+  border-color: var(--vert-fonce);
+  background: var(--vert-tres-clair);
+}
+
+.autre-service-emoji { font-size: 22px; }
+.autre-service-info { flex: 1; }
+.autre-service-nom { font-size: 14px; font-weight: 600; color: var(--texte-fonce); margin-bottom: 2px; }
+.autre-service-meta { font-size: 12px; color: var(--texte-gris); }
+.autre-service-arrow { font-size: 16px; color: var(--vert-fonce); }
