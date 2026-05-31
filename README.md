@@ -94,7 +94,9 @@ Ensuite, ouvrir `code/vitacare_v9/php/db.php` et renseigner les identifiants de 
 Démarrer WAMP/XAMPP puis accéder à :
 
 ```
-http://localhost/VitaCare/code/vitacare_v9/
+
+http://localhost/vitacare_v9/index.php
+
 ```
 
 ---
